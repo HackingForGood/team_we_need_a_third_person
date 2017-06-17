@@ -98,7 +98,7 @@ function createPostElement(postId, title, text, author, authorId, authorPic, mem
       '<div class="post post-' + postId + ' mdl-cell mdl-cell--12-col ' +
                   'mdl-cell--6-col-tablet mdl-cell--4-col-desktop mdl-grid mdl-grid--no-spacing">' +
         '<div class="mdl-card mdl-shadow--2dp">' +
-          '<div class="mdl-card__title hb-yellow-color mdl-color-text--white">' +
+          '<div class="mdl-card__title hb-yellow-color hb-red-text">' +
             '<h4 class="mdl-card__title-text"></h4>' +
           '</div>' +
           '<div class="header">' +
@@ -140,10 +140,10 @@ function createPostElement(postId, title, text, author, authorId, authorPic, mem
   var unStar = postElement.getElementsByClassName('not-starred')[0];
 
   // Set values.
-  postElement.getElementsByClassName('other')[0].innerText = text;
-  postElement.getElementsByClassName('members')[0].innerText = members;
-  postElement.getElementsByClassName('location')[0].innerText = location;
-  postElement.getElementsByClassName('health')[0].innerText = health;
+  postElement.getElementsByClassName('other')[0].innerText = 'Other: ' + text;
+  postElement.getElementsByClassName('members')[0].innerText = 'Family Members: ' + members;
+  postElement.getElementsByClassName('location')[0].innerText = 'Location: ' + location;
+  postElement.getElementsByClassName('health')[0].innerText = 'Health: ' + health;
   postElement.getElementsByClassName('mdl-card__title-text')[0].innerText = title;
   postElement.getElementsByClassName('username')[0].innerText = author || 'Anonymous';
   postElement.getElementsByClassName('avatar')[0].style.backgroundImage = 'url("' +
