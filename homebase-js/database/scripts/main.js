@@ -139,7 +139,7 @@ function createPostElement(postId, title, text, author, authorId, authorPic, mem
   postElement.getElementsByClassName('members')[0].innerText = 'Family Members: ' + members;
   postElement.getElementsByClassName('location')[0].innerText = 'Location: ' + location;
   postElement.getElementsByClassName('health')[0].innerText = 'Health: ' + health;
-  postElement.getElementsByClassName('mdl-card__title-text')[0].innerText = title;
+  postElement.getElementsByClassName('mdl-card__title-text')[0].innerText = title + ' Family';
   postElement.getElementsByClassName('username')[0].innerText = author || 'Anonymous';
   postElement.getElementsByClassName('avatar')[0].style.backgroundImage = 'url("' +
       (authorPic || './silhouette.jpg') + '")';
