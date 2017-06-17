@@ -45,8 +45,6 @@
 
     <link rel="stylesheet" href="main.css">
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA499BRakPv8E1EUsVmdXMWnZr04L3j6EQ&callback=initMap">
-
-
     </script>
     <script>
         function initMap() {
@@ -94,46 +92,37 @@
             <!-- Navigation Bar -->
             <div class="tab mdl-layout__header-row hb-green-color">
                 <div class="mdl-tab">
-
                     <div class="hb-drop-down">
-
-                    <div id="menu-recent" class="mdl-layout__tab is-active mdl-button mdl-js-button mdl-js-ripple-effect">
-                        <i class="material-icons">new_releases</i> Projects
-                        
-                        <div class="hb-drop-down-content">
-                            <div class="hb-drop-down-project">
-                                Kigali, Rwanda
+                        <div id="menu-recent" class="mdl-layout__tab is-active mdl-button mdl-js-button mdl-js-ripple-effect">
+                            <i class="material-icons">new_releases</i> Projects 
+                            <div class="hb-drop-down-content">
+                                <div class="hb-drop-down-project">
+                                    Kigali, Rwanda
+                                </div>
+                                <div class="hb-drop-down-project">
+                                    Pondicherry, India
+                                </div>
                             </div>
-                            <div class="hb-drop-down-project">
-                                Pondicherry, India
-                            </div>
-
-                    
-                        </div>
                             <div id="menu-my-posts" class="hb-map-tab mdl-layout__tab mdl-button mdl-js-button mdl-js-ripple-effect">
-                            <i class="material-icons"></i> Map View
-                            <h3>Family Locations</h3>
+                                <i class="material-icons"></i> Map View
+                                <h3>Family Locations</h3>
 
-                            <div id="map"></div>
+                                <div id="map"></div>
+                            </div> 
                         </div>
-                       
-                    </div>
-
-
-                    <!----------------------- Leaving these in case we need an easy template ------------->
-                    <div id="menu-my-posts" style="display:none" class="mdl-layout__tab mdl-button mdl-js-button mdl-js-ripple-effect">
-                        <i class="material-icons">home</i> My posts
-                    </div>
-                    <div id="menu-my-top-posts" style="display:none" class="mdl-layout__tab mdl-button mdl-js-button mdl-js-ripple-effect">
-                        <i class="material-icons">trending_up</i> My top posts
-                    </div>
-                    <!-------------------------------------------------------------------------->
-
-
+                        <!----------------------- Leaving these in case we need an easy template ------------->
+                        <div id="menu-my-posts" style="display:none" class="mdl-layout__tab mdl-button mdl-js-button mdl-js-ripple-effect">
+                            <i class="material-icons">home</i> My posts
+                        </div>
+                        <div id="menu-my-top-posts" style="display:none" class="mdl-layout__tab mdl-button mdl-js-button mdl-js-ripple-effect">
+                            <i class="material-icons">trending_up</i> My top posts
+                        </div>
+                        <!-------------------------------------------------------------------------->
+                        </div>
 
                     <button class="mdl-button mdl-js-button mdl-button--fab hb-yellow-color mdl-shadow--4dp mdl-js-ripple-effect" id="add">
-          <i class="material-icons">mode_edit</i>
-        </button>
+                    <i class="material-icons">mode_edit</i>
+                    </button>
 
                 </div>
             </div>
