@@ -1,8 +1,7 @@
 /* HOME BASE CSS CLASSES */
 
 .hb-logo{
-    height:80px;
-    padding: 40px;
+    height:80px; 
 }
 
 .hb-logo-dash{
@@ -12,6 +11,47 @@
     left: 50%;
     margin-left: -60px;
 }
+
+.hb-green-color{
+background-color: #B2CC4C;
+}
+
+.hb-yellow-color{
+    background-color:#F6CE6F;
+}
+
+.hb-brown-color{
+    background-color: #3C1C27;
+}
+
+.hb-drop-down{ 
+    position: relative;
+    display: inline-block;
+}
+
+.hb-dropdown:hover .hb-drop-down-content {
+    display: none;
+}
+.hb-drop-down-content{
+    position: fixed;
+    padding: 8px 70px 8px 10px;
+    border-radius: 2px;
+    color: #3C1C27;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color: white;
+    z-index: 5;
+}
+
+.hb-drop-down-content:hover{
+    background-color: whitesmoke;
+}
+
+.hb-drop-down-project{
+    
+    
+}
+
+/*FIREBASE  CLASSES */
 
 html, body {
     font-family: 'Roboto', 'Helvetica', sans-serif;
@@ -48,10 +88,10 @@ h3 {
 .mdl-layout.is-upgraded .mdl-layout__tab.is-active::after,
 .header .mdl-textfield__label:after {
 
-    background-color: #B2CC4C;
+    background-color: #F6CE6F;
 }
 .mdl-snackbar__action {
-    color: #B2CC4C;
+    color: #F6CE6F;
 }
 .mdl-textfield__label:after {
     background-color: white;
@@ -289,7 +329,7 @@ h3 {
 }
 .post .star .material-icons {
     font-size: 35px;
-    color: #B2CC4C;
+    color: #F6CE6F;
     cursor: pointer;
 }
 .post .star .material-icons:HOVER {
@@ -328,7 +368,7 @@ h3 {
 
 /* Dropdown button on hover & focus */
 .dropbtn:hover, .dropbtn:focus {
-    background-color: #3e8e41;
+    background-color: #F6CE6F;
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -341,7 +381,7 @@ h3 {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: #F6CE6F;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
