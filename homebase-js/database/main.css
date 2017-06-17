@@ -29,7 +29,8 @@ background-color: #B2CC4C;
 }
 
 .hb-red-text{
-    color: #861537; 
+    color: #861537;
+    font-weight: 900;
 }
 
 .hb-sign-out{

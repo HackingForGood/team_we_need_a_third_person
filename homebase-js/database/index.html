@@ -70,39 +70,41 @@
 
 <body>
     <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-color--green">
+
+
         <!-- Splash screen -->
         <section id="page-splash">
             <img src="19349279_1808693582479669_152900880_o.png" class="hb-logo">
             <div>
                 <button id="sign-in-button" class="mdl-button--raised mdl-button mdl-js-button mdl-js-ripple-effect">
-            <i class="material-icons">account_circle</i> Sign in with Google</button>
+          
+          
+          <i class="material-icons">account_circle</i> Sign in with Google</button>
             </div>
         </section>
+
         <!-- Header section containing logo and menu -->
         <header class="header mdl-layout__header mdl-color--white">
+
             <div class="mdl-layout__header-row titlebar mdl-color--white">
                 <img src="19349279_1808693582479669_152900880_o.png" class="hb-logo-dash">
-                <button id="sign-out-button" class="hb-sign-out hb-red-color mdl-button--raised mdl-button mdl-js-button mdl-js-ripple-effect"><i class="material-icons">account_circle</i> Sign out</button>
+                <button id="sign-out-button" class="hb-red-color mdl-button--raised mdl-button mdl-js-button mdl-js-ripple-effect"><i class="material-icons">account_circle</i> Sign out</button>
             </div>
+
             <!-- Navigation Bar -->
             <div class="tab mdl-layout__header-row hb-green-color">
                 <div class="mdl-tab">
-                    <div class="hb-drop-down">
-                        <div id="menu-recent" onclick="myFunction()" class="mdl-layout__tab is-active mdl-button mdl-js-button mdl-js-ripple-effect">
-                            <i class="material-icons">new_releases</i> Projects
 
-                            <div class="hb-drop-down-content">
-                                <div class="hb-drop-down-project">
-                                    Project 1
-                                </div>
-                                <div class="hb-drop-down-project">
-                                    Project 2
-                                </div>
-                                <div class="hb-drop-down-project">
-                                    Project 3
-                                </div>
+                    <div class="hb-drop-down">
+                    <div id="menu-recent" class="mdl-layout__tab is-active mdl-button mdl-js-button mdl-js-ripple-effect">
+                        <i class="material-icons">new_releases</i> Projects
+                        
+                        <div class="hb-drop-down-content">
+                            <div class="hb-drop-down-project">
+                                Project 1
                             </div>
                         </div>
+
                         </div>
                      <div id="menu-my-posts" class="hb-map-tab mdl-layout__tab mdl-button mdl-js-button mdl-js-ripple-effect">
                             <i class="material-icons"></i> Map View
@@ -110,6 +112,7 @@
                          
                             <div id="map"></div>
                     </div>
+                </div>
 
 
                     <!----------------------- Leaving these in case we need an easy template ------------->
@@ -120,9 +123,13 @@
                         <i class="material-icons">trending_up</i> My top posts
                     </div>
                     <!-------------------------------------------------------------------------->
+
+
+
                     <button class="mdl-button mdl-js-button mdl-button--fab hb-yellow-color mdl-shadow--4dp mdl-js-ripple-effect" id="add">
           <i class="material-icons">mode_edit</i>
         </button>
+
                 </div>
             </div>
 
@@ -137,7 +144,7 @@
                     <!-- Card containing the inputs to add a new messages -->
                     <div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet
                   mdl-cell--6-col-desktop">
-                        <div class="mdl-card__title hb-green-color mdl-color-text--white">
+                        <div class="mdl-card__title hb-yellow-color hb-red-text">
                             <h2 class="mdl-card__title-text">New Family</h2>
                         </div>
                         <div class="mdl-card__supporting-text mdl-color-text--grey-600">
@@ -163,7 +170,7 @@
                                     <label class="mdl-textfield__label" for="new-post-message">Other</label>
                                 </div>
                                 <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
-                  Add family
+                  Add Family
                 </button>
                             </form>
                         </div>
