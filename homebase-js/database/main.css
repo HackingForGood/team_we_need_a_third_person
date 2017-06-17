@@ -1,25 +1,24 @@
-/**
- * Copyright 2015 Google Inc. All Rights Reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+/* HOME BASE CSS CLASSES */
+
+.hb-logo{
+    height:80px;
+    padding: 40px;
+}
+
+.hb-logo-dash{
+    position: relative;
+    height: 40px;
+    padding: 5px;
+    left: 50%;
+    margin-left: -60px;
+}
 
 html, body {
     font-family: 'Roboto', 'Helvetica', sans-serif;
 }
 a {
     text-decoration: underline;
-    color: #039BE5;
+    color: #f9f9f9;
 }
 .mdl-menu a {
     text-decoration: none;
@@ -48,16 +47,16 @@ h3 {
 /* Overrides MDL colors */
 .mdl-layout.is-upgraded .mdl-layout__tab.is-active::after,
 .header .mdl-textfield__label:after {
-    background-color: #FFCA28;
+    background-color: #B2CC4C;
 }
 .mdl-snackbar__action {
-    color: #FFCA28;
+    color: #B2CC4C;
 }
 .mdl-textfield__label:after {
-    background-color: #0288D1;
+    background-color: white;
 }
 .mdl-textfield--floating-label.is-focused .mdl-textfield__label {
-    color: #0288D1;
+    color: white;
 }
 
 /* Header */
@@ -128,7 +127,7 @@ h3 {
 }
 #sign-out-button {
     margin: 10px;
-    color: inherit;
+    color: white;
 }
 .mdl-button .material-icons {
     margin-top: -2px;
@@ -289,7 +288,7 @@ h3 {
 }
 .post .star .material-icons {
     font-size: 35px;
-    color: #ffcb0c;
+    color: #B2CC4C;
     cursor: pointer;
 }
 .post .star .material-icons:HOVER {
@@ -307,8 +306,7 @@ h3 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #0288D1;
-    background: radial-gradient(circle, #039BE5, #01579b);
+    background: radial-gradient(circle, white, #A2C24D);
     z-index: 10000;
     display: flex;
     justify-content: center;
