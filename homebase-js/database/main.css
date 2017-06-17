@@ -66,12 +66,17 @@ background-color: #B2CC4C;
 }
 
  #map {
-        position: fixed !important;
         left: 20px;
         top: 150px;
         height: 900px;
         width: 90%;
        }
+
+
+.hb-map-tab:hover #map{
+    display: block;
+    position: fixed !important;
+}
 
 .hb-map-tab {
     width: 20px;

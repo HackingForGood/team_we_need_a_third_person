@@ -461,7 +461,8 @@ window.addEventListener('load', function() {
 function myFunction() {
     var x = document.getElementById('map');
     if (x.style.display === 'none') {
-        x.style.display = 'fixed';
+        x.style.display = 'block';
+        x.style.positon = 'fixed !important';
     } else {
         x.style.display = 'none';
     }
