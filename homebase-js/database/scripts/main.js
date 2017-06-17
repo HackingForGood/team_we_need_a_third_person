@@ -98,7 +98,7 @@ function createPostElement(postId, title, text, author, authorId, authorPic, mem
       '<div class="post post-' + postId + ' mdl-cell mdl-cell--12-col ' +
                   'mdl-cell--6-col-tablet mdl-cell--4-col-desktop mdl-grid mdl-grid--no-spacing">' +
         '<div class="mdl-card mdl-shadow--2dp">' +
-          '<div class="mdl-card__title hb-red-color mdl-color-text--white">' +
+          '<div class="mdl-card__title hb-yellow-color mdl-color-text--white">' +
             '<h4 class="mdl-card__title-text"></h4>' +
           '</div>' +
           '<div class="header">' +
