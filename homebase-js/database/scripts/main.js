@@ -107,11 +107,6 @@ function createPostElement(postId, title, text, author, authorId, authorPic, mem
               '<div class="username mdl-color-text--black"></div>' +
             '</div>' +
           '</div>' +
-          '<span class="star">' +
-            '<div class="not-starred material-icons">star_border</div>' +
-            '<div class="starred material-icons">star</div>' +
-            '<div class="star-count">0</div>' +
-          '</span>' +
           '<div class="members text"></div>' +
           '<div class="location text"></div>' +
           '<div class="health text"></div>' +
@@ -136,8 +131,8 @@ function createPostElement(postId, title, text, author, authorId, authorPic, mem
 
   var addCommentForm = postElement.getElementsByClassName('add-comment')[0];
   var commentInput = postElement.getElementsByClassName('new-comment')[0];
-  var star = postElement.getElementsByClassName('starred')[0];
-  var unStar = postElement.getElementsByClassName('not-starred')[0];
+  // var star = postElement.getElementsByClassName('starred')[0];
+  // var unStar = postElement.getElementsByClassName('not-starred')[0];
 
   // Set values.
   postElement.getElementsByClassName('other')[0].innerText = 'Other: ' + text;
@@ -165,24 +160,24 @@ function createPostElement(postId, title, text, author, authorId, authorPic, mem
   });
   // [END child_event_listener_recycler]
 
-  // Listen for likes counts.
-  // [START post_value_event_listener]
-  var starCountRef = firebase.database().ref('posts/' + postId + '/starCount');
-  starCountRef.on('value', function(snapshot) {
-    updateStarCount(postElement, snapshot.val());
-  });
-  // [END post_value_event_listener]
+  // // Listen for likes counts.
+  // // [START post_value_event_listener]
+  // var starCountRef = firebase.database().ref('posts/' + postId + '/starCount');
+  // starCountRef.on('value', function(snapshot) {
+  //   updateStarCount(postElement, snapshot.val());
+  // });
+  // // [END post_value_event_listener]
 
-  // Listen for the starred status.
-  var starredStatusRef = firebase.database().ref('posts/' + postId + '/stars/' + uid)
-  starredStatusRef.on('value', function(snapshot) {
-    updateStarredByCurrentUser(postElement, snapshot.val());
-  });
+  // // Listen for the starred status.
+  // var starredStatusRef = firebase.database().ref('posts/' + postId + '/stars/' + uid)
+  // starredStatusRef.on('value', function(snapshot) {
+  //   updateStarredByCurrentUser(postElement, snapshot.val());
+  // });
 
   // Keep track of all Firebase reference on which we are listening.
   listeningFirebaseRefs.push(commentsRef);
-  listeningFirebaseRefs.push(starCountRef);
-  listeningFirebaseRefs.push(starredStatusRef);
+  // listeningFirebaseRefs.push(starCountRef);
+  // listeningFirebaseRefs.push(starredStatusRef);
 
   // Create new comment.
   addCommentForm.onsubmit = function(e) {
@@ -192,15 +187,15 @@ function createPostElement(postId, title, text, author, authorId, authorPic, mem
     commentInput.parentElement.MaterialTextfield.boundUpdateClassesHandler();
   };
 
-  // Bind starring action.
-  var onStarClicked = function() {
-    var globalPostRef = firebase.database().ref('/posts/' + postId);
-    var userPostRef = firebase.database().ref('/user-posts/' + authorId + '/' + postId);
-    toggleStar(globalPostRef, uid);
-    toggleStar(userPostRef, uid);
-  };
-  unStar.onclick = onStarClicked;
-  star.onclick = onStarClicked;
+  // // Bind starring action.
+  // var onStarClicked = function() {
+  //   var globalPostRef = firebase.database().ref('/posts/' + postId);
+  //   var userPostRef = firebase.database().ref('/user-posts/' + authorId + '/' + postId);
+  //   toggleStar(globalPostRef, uid);
+  //   toggleStar(userPostRef, uid);
+  // };
+  // unStar.onclick = onStarClicked;
+  // star.onclick = onStarClicked;
 
   return postElement;
 }
