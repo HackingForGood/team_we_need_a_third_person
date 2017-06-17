@@ -18,8 +18,10 @@
 // Shortcuts to DOM Elements.
 var messageForm = document.getElementById('message-form');
 var messageInput = document.getElementById('new-post-message');
-var titleInput = document.getElementById('new-post-title');
-var dateInput = document.getElementById('new-post-date');
+var titleInput = document.getElementById('name');
+var titleInput = document.getElementById('members');
+var titleInput = document.getElementById('location');
+var titleInput = document.getElementById('health');
 var signInButton = document.getElementById('sign-in-button');
 var signOutButton = document.getElementById('sign-out-button');
 var splashPage = document.getElementById('page-splash');
