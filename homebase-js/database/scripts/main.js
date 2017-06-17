@@ -19,6 +19,7 @@
 var messageForm = document.getElementById('message-form');
 var messageInput = document.getElementById('new-post-message');
 var titleInput = document.getElementById('new-post-title');
+var dateInput = document.getElementById('new-post-date');
 var signInButton = document.getElementById('sign-in-button');
 var signOutButton = document.getElementById('sign-out-button');
 var splashPage = document.getElementById('page-splash');
@@ -36,24 +37,25 @@ var listeningFirebaseRefs = [];
  * Saves a new post to the Firebase DB.
  */
 // [START write_fan_out]
-function writeNewPost(uid, username, picture, title, body) {
+function writeNewPost(uid, username, picture, title, body, date) {
   // A post entry.
   var postData = {
     author: username,
     uid: uid,
     body: body,
     title: title,
+    date: date,
     starCount: 0,
     authorPic: picture
   };
 
   // Get a key for a new Post.
-  var newPostKey = firebase.database().ref().child('profiles').push().key;
+  var newPostKey = firebase.database().ref().child('posts').push().key;
 
   // Write the new post's data simultaneously in the posts list and the user's post list.
   var updates = {};
-  updates['/profiles/' + newPostKey] = postData;
-  updates['/user-profiles/' + uid + '/' + newPostKey] = postData;
+  updates['/posts/' + newPostKey] = postData;
+  updates['/user-posts/' + uid + '/' + newPostKey] = postData;
 
   return firebase.database().ref().update(updates);
 }
@@ -85,7 +87,7 @@ function toggleStar(postRef, uid) {
 /**
  * Creates a post element.
  */
-function createPostElement(postId, title, text, author, authorId, authorPic) {
+function createPostElement(postId, title, text, author, authorId, authorPic, date) {
   var uid = firebase.auth().currentUser.uid;
 
   var html =
@@ -107,6 +109,7 @@ function createPostElement(postId, title, text, author, authorId, authorPic) {
             '<div class="star-count">0</div>' +
           '</span>' +
           '<div class="text"></div>' +
+          '<div class="date"></div>' +
           '<div class="comments-container"></div>' +
           '<form class="add-comment" action="#">' +
             '<div class="mdl-textfield mdl-js-textfield">' +
@@ -132,6 +135,7 @@ function createPostElement(postId, title, text, author, authorId, authorPic) {
 
   // Set values.
   postElement.getElementsByClassName('text')[0].innerText = text;
+  postElement.getElementsByClassName('date')[0].innerText = date;
   postElement.getElementsByClassName('mdl-card__title-text')[0].innerText = title;
   postElement.getElementsByClassName('username')[0].innerText = author || 'Anonymous';
   postElement.getElementsByClassName('avatar')[0].style.backgroundImage = 'url("' +
@@ -273,7 +277,7 @@ function startDatabaseQueries() {
       var author = data.val().author || 'Anonymous';
       var containerElement = sectionElement.getElementsByClassName('posts-container')[0];
       containerElement.insertBefore(
-          createPostElement(data.key, data.val().title, data.val().body, author, data.val().uid, data.val().authorPic),
+          createPostElement(data.key, data.val().title, data.val().body, author, data.val().uid, data.val().authorPic, data.val().date),
           containerElement.firstChild);
     });
     postsRef.on('child_changed', function(data) {	
@@ -363,7 +367,7 @@ function onAuthStateChanged(user) {
 /**
  * Creates a new post for the current user.
  */
-function newPostForCurrentUser(title, text) {
+function newPostForCurrentUser(title, text, date) {
   // [START single_value_read]
   var userId = firebase.auth().currentUser.uid;
   return firebase.database().ref('/users/' + userId).once('value').then(function(snapshot) {
@@ -371,7 +375,7 @@ function newPostForCurrentUser(title, text) {
     // [START_EXCLUDE]
     return writeNewPost(firebase.auth().currentUser.uid, username,
         firebase.auth().currentUser.photoURL,
-        title, text);
+        title, text, date);
     // [END_EXCLUDE]
   });
   // [END single_value_read]
@@ -418,12 +422,14 @@ window.addEventListener('load', function() {
     e.preventDefault();
     var text = messageInput.value;
     var title = titleInput.value;
-    if (text && title) {
-      newPostForCurrentUser(title, text).then(function() {
+    var date = dateInput.value;
+    if (text && title && date) {
+      newPostForCurrentUser(title, text, date).then(function() {
         myPostsMenuButton.click();
       });
       messageInput.value = '';
       titleInput.value = '';
+      dateInput.value = '';
     }
   };
 
@@ -444,24 +450,3 @@ window.addEventListener('load', function() {
   };
   recentMenuButton.onclick();
 }, false);
-
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-}
-
-// Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
