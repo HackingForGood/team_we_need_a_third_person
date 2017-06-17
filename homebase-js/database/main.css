@@ -30,7 +30,7 @@ background-color: #B2CC4C;
 
 .hb-red-text{
     color: #861537;
-    font-weight: 900;
+    font-weight: 700;
 }
 
 .hb-sign-out{
@@ -66,12 +66,17 @@ background-color: #B2CC4C;
 }
 
  #map {
-        position: fixed !important;
         left: 20px;
         top: 150px;
         height: 900px;
         width: 90%;
        }
+
+
+.hb-map-tab:hover #map{
+    display: block;
+    position: fixed !important;
+}
 
 .hb-map-tab {
     width: 20px;
@@ -336,6 +341,13 @@ h3 {
     padding: 0 10px;
     color: grey;
 }
+
+.post .text2 {
+    padding: 0 10px;
+    color: black;
+    font-weight: 700;
+}
+
 .post .comments-container .text {
     margin-left: 5px;
     color: white;

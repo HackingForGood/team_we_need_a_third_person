@@ -107,9 +107,13 @@ function createPostElement(postId, title, text, author, authorId, authorPic, mem
               '<div class="username mdl-color-text--black"></div>' +
             '</div>' +
           '</div>' +
+          '<div class = "text2">Family Members:</div> ' +
           '<div class="members text"></div>' +
+          '<div class = "text2">Location:</div> ' +
           '<div class="location text"></div>' +
+          '<div class = "text2">Health:</div> ' +
           '<div class="health text"></div>' +
+          '<div class = "text2">Other:</div> ' +
           '<div class="other text"></div>' +
           '<div class="comments-container"></div>' +
           '<form class="add-comment" action="#">' +
@@ -135,10 +139,10 @@ function createPostElement(postId, title, text, author, authorId, authorPic, mem
   // var unStar = postElement.getElementsByClassName('not-starred')[0];
 
   // Set values.
-  postElement.getElementsByClassName('other')[0].innerText = 'Other: ' + text;
-  postElement.getElementsByClassName('members')[0].innerText = 'Family Members: ' + members;
-  postElement.getElementsByClassName('location')[0].innerText = 'Location: ' + location;
-  postElement.getElementsByClassName('health')[0].innerText = 'Health: ' + health;
+  postElement.getElementsByClassName('other')[0].innerText = text;
+  postElement.getElementsByClassName('members')[0].innerText = members;
+  postElement.getElementsByClassName('location')[0].innerText = location;
+  postElement.getElementsByClassName('health')[0].innerText = health;
   postElement.getElementsByClassName('mdl-card__title-text')[0].innerText = title + ' Family';
   postElement.getElementsByClassName('username')[0].innerText = author || 'Anonymous';
   postElement.getElementsByClassName('avatar')[0].style.backgroundImage = 'url("' +
@@ -461,7 +465,8 @@ window.addEventListener('load', function() {
 function myFunction() {
     var x = document.getElementById('map');
     if (x.style.display === 'none') {
-        x.style.display = 'fixed';
+        x.style.display = 'block';
+        x.style.positon = 'fixed !important';
     } else {
         x.style.display = 'none';
     }
