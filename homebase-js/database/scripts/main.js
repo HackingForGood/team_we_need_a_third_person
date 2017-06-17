@@ -462,3 +462,12 @@ window.addEventListener('load', function() {
   };
   recentMenuButton.onclick();
 }, false);
+
+function myFunction() {
+    var x = document.getElementById('map');
+    if (x.style.display === 'none') {
+        x.style.display = 'fixed';
+    } else {
+        x.style.display = 'none';
+    }
+}

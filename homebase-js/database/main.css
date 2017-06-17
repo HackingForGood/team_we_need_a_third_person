@@ -9,7 +9,7 @@
     height: 40px;
     padding: 5px;
     left: 50%;
-    margin-left: -60px;
+    margin-left: -80px;
 }
 
 .hb-green-color{
@@ -65,10 +65,17 @@ background-color: #B2CC4C;
 }
 
  #map {
-        position: fixed;
-        height: 400px;
-        width: 100%;
+        position: fixed !important;
+        left: 20px;
+        top: 150px;
+        height: 900px;
+        width: 90%;
        }
+
+.hb-map-tab {
+    width: 20px;
+}
+
 
 /*FIREBASE  CLASSES */
 
@@ -420,6 +427,4 @@ h3 {
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
 
-.hb-map-tab {
-    width: 20px;
-}
+

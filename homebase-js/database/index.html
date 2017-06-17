@@ -51,8 +51,8 @@
     <script>
         function initMap() {
             var uluru = {
-                lat: -25.363,
-                lng: 131.044
+                lat: -1.951756,
+                lng: 30.082739
             };
             var map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 4,
@@ -88,7 +88,7 @@
             <div class="tab mdl-layout__header-row hb-green-color">
                 <div class="mdl-tab">
                     <div class="hb-drop-down">
-                        <div id="menu-recent" class="mdl-layout__tab is-active mdl-button mdl-js-button mdl-js-ripple-effect">
+                        <div id="menu-recent" onclick="myFunction()" class="mdl-layout__tab is-active mdl-button mdl-js-button mdl-js-ripple-effect">
                             <i class="material-icons">new_releases</i> Projects
 
                             <div class="hb-drop-down-content">
@@ -107,6 +107,7 @@
                      <div id="menu-my-posts" class="hb-map-tab mdl-layout__tab mdl-button mdl-js-button mdl-js-ripple-effect">
                             <i class="material-icons"></i> Map View
                             <h3>Family Locations</h3>
+                         
                             <div id="map"></div>
                     </div>
 
