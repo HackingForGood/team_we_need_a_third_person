@@ -29,14 +29,17 @@ background-color: #B2CC4C;
     display: inline-block;
 }
 
-.hb-dropdown:hover .hb-drop-down-content {
-    display: none;
+.hb-drop-down:hover .hb-drop-down-content {
+    display: block;
 }
 .hb-drop-down-content{
+    display: none;
+    margin-left: -24px;
     position: fixed;
-    padding: 8px 70px 8px 10px;
+    padding: 8px 64px 8px 10px;
     border-radius: 2px;
     color: #3C1C27;
+    text-align: center;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     background-color: white;
     z-index: 5;
