@@ -24,6 +24,14 @@ background-color: #B2CC4C;
     background-color: #3C1C27;
 }
 
+.hb-red-color{
+    background-color: #861537;
+}
+
+.hb-sign-out{
+    position: fixed;
+    margin-top: -3px !important;
+}
 .hb-drop-down{ 
     position: relative;
     display: inline-block;
