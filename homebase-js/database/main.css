@@ -28,6 +28,10 @@ background-color: #B2CC4C;
     background-color: #861537;
 }
 
+.hb-red-text{
+    color: #861537; 
+}
+
 .hb-sign-out{
     position: fixed;
     margin-top: -3px !important;
@@ -44,7 +48,6 @@ background-color: #B2CC4C;
     display: none;
     margin-left: -24px;
     position: fixed;
-    padding: 8px 64px 8px 10px;
     border-radius: 2px;
     color: #3C1C27;
     text-align: center;
@@ -53,16 +56,16 @@ background-color: #B2CC4C;
     z-index: 5;
 }
 
-.hb-drop-down-content:hover{
-    background-color: whitesmoke;
-}
-
 .hb-drop-down-project{
-    
+    padding: 8px 64px 8px 10px;
+}
+.hb-drop-down-project:hover{
+    background-color: whitesmoke;
     
 }
 
  #map {
+        position: fixed;
         height: 400px;
         width: 100%;
        }
@@ -404,7 +407,7 @@ h3 {
 }
 
 /* Links inside the dropdown */
-.dropdown-content a {
+.dropdown-content a{
     color: black;
     padding: 12px 16px;
     text-decoration: none;

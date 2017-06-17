@@ -45,21 +45,27 @@
 
     <link rel="stylesheet" href="main.css">
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+
+
     </script>
-     <script>
-      function initMap() {
-        var uluru = {lat: -25.363, lng: 131.044};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
-          center: uluru
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
-      }
+    <script>
+        function initMap() {
+            var uluru = {
+                lat: -25.363,
+                lng: 131.044
+            };
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 4,
+                center: uluru
+            });
+            var marker = new google.maps.Marker({
+                position: uluru,
+                map: map
+            });
+        }
+
     </script>
-    
+
 </head>
 
 <body>
@@ -97,12 +103,14 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div id="menu-my-posts" class="mdl-layout__tab mdl-button mdl-js-button mdl-js-ripple-effect">
-                        <i class="material-icons"></i> Map View
+                        
+                        <div id="menu-my-posts" class="hb-map-tab mdl-layout__tab mdl-button mdl-js-button mdl-js-ripple-effect">
+                            <i class="material-icons"></i> Map View
                             <h3>My Google Maps Demo</h3>
                             <div id="map"></div>
+                        </div>
                     </div>
+
 
                     <!----------------------- Leaving these in case we need an easy template ------------->
                     <div id="menu-my-posts" style="display:none" class="mdl-layout__tab mdl-button mdl-js-button mdl-js-ripple-effect">
