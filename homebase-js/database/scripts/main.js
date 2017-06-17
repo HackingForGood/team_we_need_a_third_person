@@ -112,10 +112,10 @@ function createPostElement(postId, title, text, author, authorId, authorPic, mem
             '<div class="starred material-icons">star</div>' +
             '<div class="star-count">0</div>' +
           '</span>' +
-          '<div class="text"></div>' +
-          '<div class="members"></div>' +
-          '<div class="location"></div>' +
-          '<div class="health"></div>' +
+          '<div class="members text"></div>' +
+          '<div class="location text"></div>' +
+          '<div class="health text"></div>' +
+          '<div class="other text"></div>' +
           '<div class="comments-container"></div>' +
           '<form class="add-comment" action="#">' +
             '<div class="mdl-textfield mdl-js-textfield">' +
@@ -140,7 +140,7 @@ function createPostElement(postId, title, text, author, authorId, authorPic, mem
   var unStar = postElement.getElementsByClassName('not-starred')[0];
 
   // Set values.
-  postElement.getElementsByClassName('text')[0].innerText = text;
+  postElement.getElementsByClassName('other')[0].innerText = text;
   postElement.getElementsByClassName('members')[0].innerText = members;
   postElement.getElementsByClassName('location')[0].innerText = location;
   postElement.getElementsByClassName('health')[0].innerText = health;
